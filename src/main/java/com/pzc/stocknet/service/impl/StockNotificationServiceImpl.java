@@ -22,4 +22,15 @@ public class StockNotificationServiceImpl implements StockNotificationService {
 	public Optional<StockNotification> getStockNotification(Integer id) {
 		return resourceRepository.findById(id);
 	}
+
+	@Override
+	public Iterable<StockNotification> getAllStockNotifications() {
+		return resourceRepository.findAll();
+	}
+
+	@Override
+	public void saveStockNotification() {
+		resourceRepository.save(new StockNotification("Controller Save"));
+	}
+	
 }
