@@ -7,5 +7,5 @@ import com.pzc.stocknet.datamodel.StockNotification;
 public interface StockNotificationService {
 	Optional<StockNotification> getStockNotification(Integer id);
 	Iterable<StockNotification> getAllStockNotifications();
-	void saveStockNotification();
+	void saveStockNotification(StockNotification stockNotification);
 }

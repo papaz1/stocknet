@@ -25,13 +25,13 @@ public class StocknetApplication {
 	@Bean
 	public CommandLineRunner demo(ResourceRepository resourceRepository) {
 		return (args) -> {
-			resourceRepository.save(new StockNotification("First Stock"));
-			resourceRepository.save(new StockNotification("Second Stock"));
+			//resourceRepository.save(new StockNotification("First Stock"));
+			//resourceRepository.save(new StockNotification("Second Stock"));
 			log.info("Database contents");
-			for (StockNotification stockNotification : resourceRepository.findAll()) {
-				log.info("Here are the values from the database: "
-						+ String.valueOf(stockNotification.getId() + " " + stockNotification.getStockName()));
-			}
+			//for (StockNotification stockNotification : resourceRepository.findAll()) {
+			//	log.info("Here are the values from the database: "
+			//			+ String.valueOf(stockNotification.getId() + " " + stockNotification.getStockName()));
+			//}
 		};
 	}
 }

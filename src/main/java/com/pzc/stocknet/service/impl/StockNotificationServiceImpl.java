@@ -12,7 +12,7 @@ import com.pzc.stocknet.service.StockNotificationService;
 @Service
 public class StockNotificationServiceImpl implements StockNotificationService {
 	private ResourceRepository resourceRepository;
-
+	
 	@Autowired
 	public void setResourceRepository(ResourceRepository resrouceRepository) {
 		this.resourceRepository = resrouceRepository;
@@ -29,8 +29,8 @@ public class StockNotificationServiceImpl implements StockNotificationService {
 	}
 
 	@Override
-	public void saveStockNotification() {
-		resourceRepository.save(new StockNotification("Controller Save"));
+	public void saveStockNotification(StockNotification stockNotification) {
+		resourceRepository.save(stockNotification);
 	}
 	
 }

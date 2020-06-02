@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pzc.stocknet.datamodel.StockNotification;
@@ -26,8 +27,8 @@ public class StockNotificationController {
 	}
 	
 	@PostMapping("/postStockNotification")
-	public void postStockNotification() {
-		stockNotificationService.saveStockNotification();
+	public void postStockNotification(@RequestBody StockNotification stockNotification) {
+		stockNotificationService.saveStockNotification(stockNotification);
 	}
 		
 }
